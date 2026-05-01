@@ -16,42 +16,28 @@ Call qismida callga dahildor functionlar kelar ekan
 
 */
 
-
-function division (a, b, callback) {
-    return new Promise((resolve, reject) => {
-        if (b === 0) {
-        throw new Error("no'lga bo'lib bo'lmaydi", null);  
+//define
+async function division (a, b, callback) {
+    if (b === 0) {
+        throw new Error("no'lga bo'lib bo'lmaydi");  
     } else {
-        setInterval(function() {
-            resolve (a % b); //qoldiqli bo'lish deyiladi 
-        }, 5000);
+            return a % b //qoldiqli bo'lish deyiladi 
+        }
         
     }
-    })
-    
-    
+
+
+
+async function run() {
+
+    let result = await division(10, 3);
+    console.log("result one:", result);
+
+    result = await division(10, 4);
+    console.log("result two:", result);
+
+    result = await division(20, 7);
+    console.log("result there:", result);
+
 }
-
-
-
-division(10, 3).then(data => {
-    console.log("result:",data)
-    console.log("........")
-
-    division(10, 4).then(data => {
-    console.log("result:",data)
-    console.log("........")
-
-    division(20, 7).then(data => {
-    console.log("result:",data)
-    console.log("........")
-    
-}).catch(err => {
-    console.log("Error division:", err)
-});
-}).catch(err => {
-    console.log("Error division:", err)
-});
-}).catch(err => {
-    console.log("Error division:", err)
-});
+run();
