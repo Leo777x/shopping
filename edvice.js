@@ -33,7 +33,7 @@ function giveAdvice (age, callback) {
 
 //call
 
-giveAdvice(62, (err, data) =>{
+giveAdvice(60, (err, data) =>{
     if(err) console.log("EROR:", err);
     else{
         console.log("DATA:", data);
