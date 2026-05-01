@@ -10,8 +10,8 @@
     "start": "node server.js",
     "edvice": "nodemon edvice.js",
     "suggest": "nodemon suggest.js",
-    "compute": "node compute.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cap": "nodemon cap.js",
+    "compute": "node compute.js"
   },
   "dependencies": {
     "express": "^5.2.1",
