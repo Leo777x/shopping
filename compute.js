@@ -20,11 +20,28 @@ function division (a, b, callback) {
 
 
 //call
-division(10, 0, (err, data) => {
+division(10, 3, (err, data) => {
      if (err) console.log("ERROR:", err, data);
      else{
         console.log("RESULT:", data)
-        console.log("...."); 
+        console.log("....");
+
+        division(10, 4, (err, data) => {
+     if (err) console.log("ERROR:", err, data);
+     else{
+        console.log("RESULT:", data)
+        console.log("....");
+
+        division(20, 7, (err, data) => {
+     if (err) console.log("ERROR:", err, data);
+     else{
+        console.log("RESULT:", data)
+        console.log("....");
+        
+     }
+});
+     }
+}); 
      }
 });
   
